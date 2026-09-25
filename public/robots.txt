@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ekawahyu-portofolio-eka-wahyu-s-projects.vercel.app/sitemap.xml
