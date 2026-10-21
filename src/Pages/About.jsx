@@ -1,6 +1,6 @@
 import React, { useEffect, memo, useMemo, useState, useCallback, useRef } from "react"
 import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion"
-import { FileText, Code, Award, Trophy, ArrowUpRight, GraduationCap, Briefcase } from "lucide-react"
+import { Code, Award, Trophy, ArrowUpRight, GraduationCap, Briefcase } from "lucide-react"
 import { BorderBeamPanel } from "../components/ui/border-beam-panel"
 import { supabase } from "../supabase"
 
@@ -261,7 +261,7 @@ const AboutPage = () => {
         {/* ── Desktop Layout (lg+) ── */}
         <div className="hidden lg:grid lg:grid-cols-[2.5fr_3fr_2fr] gap-6 items-center">
 
-          {/* Left: Name + View Resume */}
+          {/* Left: Name */}
           <div className="min-w-0 space-y-6 text-left" data-aos="fade-right" data-aos-duration="1000">
             <h3 className="text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight"
               style={{ fontFamily: "var(--font-display)" }}>
@@ -270,14 +270,6 @@ const AboutPage = () => {
               <span className="block text-white whitespace-nowrap">Syahputra</span>
               <span className="block text-white whitespace-nowrap">Akmal</span>
             </h3>
-            <div className="mt-8">
-              <a href="https://drive.google.com/file/d/1_Isso2Qk9xqHtEG5ac5uCiDjaOsk49Yl/view?usp=drive_link">
-                <button className="px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.35)] whitespace-nowrap"
-                  style={{ background: "#2563eb", fontFamily: "var(--font-display)", color: "white" }}>
-                  <FileText className="w-4 h-4" /> View Resume
-                </button>
-              </a>
-            </div>
           </div>
 
           {/* Center: Image */}
@@ -290,7 +282,7 @@ const AboutPage = () => {
             <div className="text-base sm:text-lg leading-relaxed" style={{ color: "var(--col-muted)" }}>
               <p>Management student at UIN Suska Riau with a passion for Finance & Investment. 
                 Focused on trading, market analysis, and risk management. 
-                 Continuously learning to become a more disciplined and analytical trader.</p>
+                  Continuously learning to become a more disciplined and analytical trader.</p>
             </div>
             <div className="mt-8">
               <a href="#Portofolio">
@@ -322,14 +314,8 @@ const AboutPage = () => {
                 particularly in market analysis, trading, and risk management. I possess skills in financial analysis, market analysis, risk management, 
                 and data analysis, which I continue to develop through academic learning and practical experience.</p>
           </div>
-          {/* Buttons — full width, stacked */}
+          {/* Buttons — full width */}
           <div className="flex flex-col gap-3 w-full">
-            <a href="https://drive.google.com/file/d/1_Isso2Qk9xqHtEG5ac5uCiDjaOsk49Yl/view?usp=drive_link" className="w-full">
-              <button className="w-full px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-                style={{ background: "#2563eb", fontFamily: "var(--font-display)", color: "white" }}>
-                <FileText className="w-4 h-4" /> View Resume
-              </button>
-            </a>
             <a href="#Portofolio" className="w-full">
               <button className="w-full px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
                 style={{ border: "1px solid rgba(37,99,235,0.35)", color: "#60a5fa", fontFamily: "var(--font-display)" }}>
@@ -409,7 +395,7 @@ const AboutPage = () => {
                 experiences.map((exp) => (
                   <div
                     key={exp.id}
-                   className="rounded-xl px-6 py-5 flex items-center gap-4 bg-slate-800/50 hover:bg-slate-700/50 border border-white/5 transition-colors duration-200"
+                    className="rounded-xl px-6 py-5 flex items-center gap-4 bg-slate-800/50 hover:bg-slate-700/50 border border-white/5 transition-colors duration-200"
                   >
                     <div className="w-14 h-14 rounded-2xl flex-shrink-0 overflow-hidden flex items-center justify-center">
                       {exp.logo ? (
